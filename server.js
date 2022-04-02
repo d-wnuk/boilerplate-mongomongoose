@@ -5,6 +5,13 @@
 
 const express = require("express");
 const app = express();
+
+const port = process.env.PORT || 3338;
+// ...
+server.listen(port, () => {
+  console.log(`Listening on http://localhost:${port}/`);
+});
+
 let mongoose;
 try {
   mongoose = require("mongoose");
